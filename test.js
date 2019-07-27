@@ -1,9 +1,15 @@
-const unicornFun = require('.');
+const parser = require(".");
 
-test('main', () => {
+test("duration parsed should work as expected", () => {
+	time = parser("1:23:24");
+	expect(time.hours).toBe(1);
+	expect(time.minutes).toBe(23);
+	expect(time.seconds).toBe(24);
+	expect(time.duration).toBe(5004);
+});
+
+test("only string should be passed", () => {
 	expect(() => {
-        unicornFun(123);
-    }).toThrowError(new TypeError('Expected a string, got number'));
-
-    expect(unicornFun('unicorns')).toEqual('unicorns & rainbows');
+		parser(2121);
+	}).toThrow("time must be string");
 });

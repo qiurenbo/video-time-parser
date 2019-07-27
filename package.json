@@ -1,9 +1,9 @@
 {
-	"name": "unicorn-fun",
-	"version": "0.0.0",
-	"description": "My awesome module",
+	"name": "video-time-parser",
+	"version": "0.1.0",
+	"description": "video-time-parser is ued to parse time in web viedo.",
 	"license": "MIT",
-	"repository": "https://github.com/qiurenbo/xxx",
+	"repository": "https://github.com/qiurenbo/video-time-parser",
 	"author": {
 		"name": "qiurenbo",
 		"email": "qiurenbo@outlook.com",
@@ -22,7 +22,9 @@
 		"unicorn",
 		"fun"
 	],
-	"dependencies": {},
+	"dependencies": {
+		"is-helper": "^0.2.0"
+	},
 	"devDependencies": {
 		"jest": "^24.8.0"
 	}

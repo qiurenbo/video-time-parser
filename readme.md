@@ -1,71 +1,45 @@
-# node-module-boilerplate
-
-> Boilerplate to kickstart creating a Node.js module
-
-This is what I use for [my own modules](https://www.npmjs.com/~sindresorhus).
-
-Also check out [`node-cli-boilerplate`](https://github.com/sindresorhus/node-cli-boilerplate).
-
-
-## Getting started
-
-**Click the "Use this template" button.**
-
-Alternatively, create a new directory and then run:
-
-```
-$ curl -fsSL https://github.com/sindresorhus/node-module-boilerplate/archive/master.tar.gz | tar -xz --strip-components=1
-```
-
-There's also a [Yeoman generator](https://github.com/sindresorhus/generator-nm).
-
-
----
-
-**Remove everything from here and above**
-
----
-
-
-# unicorn-fun [![Build Status](https://travis-ci.com/YOUR-GITHUB-USERNAME/unicorn-fun.svg?branch=master)](https://travis-ci.com/YOUR-GITHUB-USERNAME/unicorn-fun)
-
-> My awesome module
-
+# video-time-parser [![npm version](https://badge.fury.io/js/video-time-parser.svg)](https://badge.fury.io/js/video-time-parser)[![Build Status](https://travis-ci.com/qiurenbo/video-time-parser.svg?branch=master)](https://travis-ci.com/qiurenbo/video-time-parser)
 
 ## Install
 
 ```
-$ npm install unicorn-fun
+$ npm install video-time-parser
 ```
-
 
 ## Usage
 
 ```js
-const unicornFun = require('unicorn-fun');
+const parser = require("video-time-parser");
 
-unicornFun('unicorns');
-//=> 'unicorns & rainbows'
+time = parser("1:23:24");
+
+//time.hours == 1
+//time.minutes == 23
+//time.seconds == 24
+//time.duration == 5004
 ```
-
 
 ## API
 
-### unicornFun(input, options?)
+### parser(input, options?)
 
 #### input
 
 Type: `string`
 
-Lorem ipsum.
-
 #### options
 
 Type: `object`
 
-##### postfix
+##### return
 
-Type: `string`<br>
-Default: `rainbows`
+Type: `object`
 
-Lorem ipsum.
+```
+{
+	hours: <number>
+	minutes:<number>
+	seconds:<number>
+	duration:<number>
+}
+```
