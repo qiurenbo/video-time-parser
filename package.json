@@ -1,6 +1,6 @@
 {
 	"name": "video-time-parser",
-	"version": "0.1.0",
+	"version": "0.2.0",
 	"description": "video-time-parser is ued to parse time in web viedo.",
 	"license": "MIT",
 	"repository": "https://github.com/qiurenbo/video-time-parser",

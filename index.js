@@ -32,6 +32,9 @@ module.exports = (time, options = {}) => {
 	}
 
 	parsed.duration = parsed.hours * 3600 + parsed.minutes * 60 + parsed.seconds;
-
+	parsed.durationByMinutes =
+		(parsed.hours * 3600 + parsed.minutes * 60 + parsed.seconds) / 60;
+	parsed.durationByHours =
+		(parsed.hours * 3600 + parsed.minutes * 60 + parsed.seconds) / 3600;
 	return parsed;
 };
